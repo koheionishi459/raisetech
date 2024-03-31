@@ -44,7 +44,13 @@
   ![画像](images/lecture04/RDSsg-1.png)  
   ![画像](images/lecture04/RDSsg-2.png)
   ![画像](images/lecture04/RDSsg-3.png)
-  ![画像](images/lecture04/RDSsg-4.png)  
+  ![画像](images/lecture04/RDSsg-4.png)
+  - EC2サブネット
+  ![画像](images/lecture04/EC2sub.png)  
+  - RDSサブネット
+  ![画像](images/lecture04/RDSsub-1.png)  
+  ![画像](images/lecture04/RDSsub-2.png)
+  ![画像](images/lecture04/RDSsub-3.png)  
 
 ## 今回の課題から学んだこと感じたこと。  
 今回の課題では環境構築をイメージするのにかなり時間がかかりました。  
