@@ -30,6 +30,21 @@
   - MySQLをインストール後、MySQLへログイン。
   ![MySQL](images/lecture04/MySQL.png)
 
+## 6. 構図のエビデンス画像  
+  - VPC詳細
+  ![画像](images/lecture04/VPCk.png)
+  - EC2詳細
+  ![画像](images/lecture04/EC2k.png)  
+  - RDS詳細
+  ![画像](images/lecture04/RDSk.png)  
+  - EC2セキュリティグループ
+  ![画像](images/lecture04/EC2sg-1.png)  
+  ![画像](images/lecture04/EC2sg-2.png)  
+  - RDSセキュリティグループ
+  ![画像](images/lecture04/RDSsg-1.png)  
+  ![画像](images/lecture04/RDSsg-2.png)
+  ![画像](images/lecture04/RDSsg-3.png)
+  ![画像](images/lecture04/RDSsg-4.png)  
 
 ## 今回の課題から学んだこと感じたこと。  
 今回の課題では環境構築をイメージするのにかなり時間がかかりました。  
