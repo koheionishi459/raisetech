@@ -49,8 +49,12 @@
   ![画像](images/lecture04/EC2sub.png)  
   - RDSサブネット
   ![画像](images/lecture04/RDSsub-1.png)  
-  ![画像](images/lecture04/RDSsub-2.png)
-  ![画像](images/lecture04/RDSsub-3.png)  
+  ![画像](images/lecture04/RDSsub-2.png)  
+  ![画像](images/lecture04/RDSsub-3.png)
+  - EC2ルートテーブル
+  ![画像](images/lecture04/EC2r.png)  
+  - RDSルートテーブル
+  ![画像](images/lecture04/RDSr.png)  
 
 ## 今回の課題から学んだこと感じたこと。  
 今回の課題では環境構築をイメージするのにかなり時間がかかりました。  
