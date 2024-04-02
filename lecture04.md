@@ -54,7 +54,31 @@
   - EC2ルートテーブル
   ![画像](images/lecture04/EC2r.png)  
   - RDSルートテーブル
-  ![画像](images/lecture04/RDSr.png)  
+  ![画像](images/lecture04/RDSr.png)
+## 7. 修正 
+デフォルトVPCにEC2とRDSを作成していたので、プライベートサブネット、ルートテーブルを追加しました。  
+HTTP/HTTPSのルールを削除しました。  
+  - VPC詳細
+  ![画像](images/lecture04/VPCt.png)
+  - EC2詳細
+  ![画像](images/lecture04/EC2t.png) 
+  - RDS詳細
+  ![画像](images/lecture04/RDSt.png)
+  - EC2サブネット
+  ![画像](images/lecture04/EC2subt.png)  
+  - RDSサブネット
+  ![画像](images/lecture04/RDSsubt-1.png)  
+  ![画像](images/lecture04/RDSsubt-2.png)  
+  ![画像](images/lecture04/RDSsubt-3.png)
+  - EC2ルートテーブル
+  ![画像](images/lecture04/EC2rt.png)  
+  - RDSルートテーブル
+  ![画像](images/lecture04/RDSrt-1.png)  
+  ![画像](images/lecture04/RDSrt-2.png)  
+  ![画像](images/lecture04/RDSrt-3.png)
+  - EC2セキュリティグループ  
+    HTTP/HTTPSのルール削除
+  ![画像](images/lecture04/EC2sgt.png)
 
 ## 今回の課題から学んだこと感じたこと。  
 今回の課題では環境構築をイメージするのにかなり時間がかかりました。  
