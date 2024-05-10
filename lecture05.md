@@ -159,7 +159,7 @@ nginx起動確認
 ![画像](images/lecture05/S3-application.png)
 
 ## 19. AWS構成図の作成   
-![画像](images/lecture05/lecture5-AWSarchitecture.png)
+![画像](images/lecture05/lecture5-AWSarchitecture-2.png)
 
 ## 感想
 環境構築を行うところから躓いて分からないことも多かったですが、色々と調べて試したりと試行錯誤しながら進めました。   
