@@ -124,7 +124,7 @@ nginx起動確認
 ![画像](images/lecture05/nginxconf2.png)
 
 ## 15. セキュリティグループのインバウンド設定でポート80番を解放 
-![画像](images/lecture05/nginxport80.png) 
+![画像](images/lecture05/nginxport80-2.png) 
 
 ## 16. 組み込みサーバー、nginx、Unixソケットを組み合わせて動作確認
 ![画像](images/lecture05/application-nginx-unix.png)
@@ -134,14 +134,20 @@ nginx起動確認
 ![画像](images/lecture05/targetgroup.png)
 
 - ALBの作成  
-![画像](images/lecture05/ALB.png)  
+![画像](images/lecture05/ALB.png)
+
+- ALBセキュリティグループ   
+  - インバウンド
+  ![画像](images/lecture05/alb-sg-in.png)
+  - アウトバウンド
+  ![画像](images/lecture05/alb-sg-out.png)
 
 ## 18. S3の作成  
 - S3作成   
 ![画像](images/lecture05/S3-bucket.png)
 
 - S3バケットポリシーの設定  
-![画像](images/lecture05/S3-BucketPolicy.png)   
+![画像](images/lecture05/S3-BucketPolicy-2.png)   
 
 - S3CORSの設定  
 ![画像](images/lecture05/S3-CORS.png)
