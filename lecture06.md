@@ -18,7 +18,7 @@
 ![画像](images/lecture06/unhealthOK-railsstartmail.png)   
 
 ## 3. AWSで今日までに作成したリソース内容の見積もり作成　　　　
-https://calculator.aws/#/estimate?id=23c3951a069c4c33d8ff152cbbd5a7023f78a7e5   
+https://calculator.aws/#/estimate?id=d2680d7e0744bd237cd128f4bb21f78020310cf1   
 
 ## 4. 先月のEC2の利用料が無料枠で収まっているか    
 - EC2の利用料はCloud9で使用したバージニアのリージョンで料金が発生していました。  
