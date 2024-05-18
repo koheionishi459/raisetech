@@ -10,12 +10,12 @@
 
 ## 2. ALBアラーム設定、メールの通知ができるか   
 - rails停止時   
-![画像](images/lecture06/unhealthNG-railsstop.png)   
-![画像](images/lecture06/unhealthNG-railsstopmail.png) 　　
+![画像](images/lecture06/unhealthy-NG.png)   
+![画像](images/lecture06/unhealthy-NGmail.png) 　　
 
 - rails起動時   
-![画像](images/lecture06/unhealthOK-railsstart.png)    
-![画像](images/lecture06/unhealthOK-railsstartmail.png)   
+![画像](images/lecture06/unhealthy-OK.png)    
+![画像](images/lecture06/unhealthy-OKmail.png)   
 
 ## 3. AWSで今日までに作成したリソース内容の見積もり作成　　　　
 https://calculator.aws/#/estimate?id=d2680d7e0744bd237cd128f4bb21f78020310cf1   
