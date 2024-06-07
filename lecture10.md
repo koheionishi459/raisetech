@@ -910,10 +910,10 @@ Outputs:
 
 
 ## 7. EC2  
+![画像](images/lecture10/lecture10-ec2-4.png)  
 ![画像](images/lecture10/lecture10-ec2-1.png)  
 ![画像](images/lecture10/lecture10-ec2-2.png)  
 ![画像](images/lecture10/lecture10-ec2-3.png)  
-![画像](images/lecture10/lecture10-ec2-4.png)  
 
 
 ## 8. ALB
