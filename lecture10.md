@@ -367,7 +367,7 @@ Parameters:
 #EC2Instance
   KeyPairName:
     Type: AWS::EC2::KeyPair::KeyName
-    Default: "raiseKO"
+    Default: ""
   EC2InstanceName:
     Type: String
     Default: "EC2"
