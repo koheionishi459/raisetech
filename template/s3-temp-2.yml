@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Access Restricted S3 Bucket
+
+Parameters:
+  S3BucketName:
+    Description: Type of this BacketName.
+    Type: String
+
+Resources:
+  SampleBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Sub ${S3BucketName}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  SampleBucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref SampleBucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+            - 's3:GetObject'
+            Effect: "Allow"
+            Sid: Stmt1544152948221
+            Resource: 
+              - !Sub 'arn:aws:s3:::${SampleBucket}'
+              - !Sub 'arn:aws:s3:::${SampleBucket}/*'
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+
+Outputs:
+  SampleBucket:
+    Value: !Ref SampleBucket
