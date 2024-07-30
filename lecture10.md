@@ -83,7 +83,18 @@
 ![画像](images/lecture10/lecture10-rds-connect-ver.png)  
 
 
+## 12. ALBターゲットグループのヘルスチェック確認
+- Nginx起動
+![画像](images/lecture10/lecture10-nginx-start.png)
+- ターゲットグループのヘルスチェック→OK
+![画像](images/lecture10/lecture10-tg-healthcheck-ok.png)
+
+
+## 13. EC2→S3へファイルをアップロード
+![画像](images/lecture10/lecture10-ec2-s3-upload.png)  
+![画像](images/lecture10/lecture10-s3-object.png)  
+
 ## 感想   
 CloudFormationのテンプレートの理解に時間がかかりました。   
-必要な設定やパターンが決まっているので理解ができれば設定内容が一目で分かるので便利だと思いました。   
+必要な設定やパターンが決まっているので、理解ができれば設定内容が一目で分かり便利だと思いました。 
 今回の課題で作成したテンプレートはコピペして作ったのでしっかり理解していこうと思います。
