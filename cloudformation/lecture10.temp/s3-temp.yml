@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 
+  Access Restricted S3 Bucket
+
+Parameters:
+  BucketName:
+    Description: Type of this BacketName.
+    Type: String
+  SystemName:
+    Description: System Name
+    Type: String
+
+Resources:
+# ------------------------------------------------------------#
+#  S3 Bucket
+# ------------------------------------------------------------#  
+
+  Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: !Ref BucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  BucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+    Properties:
+      Bucket: !Ref Bucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+              - s3:GetObject
+              - s3:PutObject
+              - s3:ListBucket
+              - s3:DeleteObject
+              - s3:GetBucketLocation
+            Effect: "Allow"
+            Sid: Stmt1544152948221
+            Resource: 
+              - !Sub "arn:aws:s3:::${BucketName}"
+              - !Sub "arn:aws:s3:::${BucketName}/*"
+            Principal:
+              AWS:
+                - !GetAtt S3AccessRole.Arn
+
+# ------------------------------------------------------------#
+#  IAM Role to access S3 Bucket
+# ------------------------------------------------------------#          
+
+  S3AccessRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      RoleName: !Sub "${SystemName}-s3-access-role"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement: 
+          - Effect: "Allow"
+            Principal: 
+              Service: 
+                - "ec2.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+
+  S3AccessInstanceProfile:
+    Type: "AWS::IAM::InstanceProfile"
+    Properties:
+      Roles:
+      - !Ref S3AccessRole
+
+# ------------------------------------------------------------#
+# Output Parameters
+# ------------------------------------------------------------#        
+
+Outputs:
+  BucketName:
+    Value: !Ref Bucket
