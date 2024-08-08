@@ -1,7 +1,7 @@
 # 第11回課題
 
 ## 1. SERVERSPECでテストコードを記述。
-- [テストコードリンク](serverspec/sample_spec.rb)
+- [テストコードリンク](severspec/sample_spec.rb)
 
 | No | テスト項目 |
 | :---: | :--- |
@@ -18,10 +18,10 @@
 
 ## 2. エビデンス画像
 - 作成したSERVERSPECのディレクトリツリー  
-![画像](images/lecture11/lecture11-severspec-tree.png)  
+![画像](images/lecture11/lecture11-serverspec-tree.png)  
 
 - テストコード実行後の結果  
-![画像](images/lecture11/lecture11-severspec-OK.png)  
+![画像](images/lecture11/lecture11-severspec-ok.png)  
 
 
 ## 3. 感想
