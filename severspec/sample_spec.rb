@@ -30,13 +30,14 @@ describe port(80) do
   it { should be_listening }
 end
 
+#RDSを使用している場合は、SERVERSPECでの確認は不要なのでコメントアウト
 # MySQLが自動起動設定になっているか（enabled）、現在実行中であるか（running）確認する
-describe service('mysqld') do
-  it { should be_enabled }
-  it { should be_running }
-end
+#describe service('mysqld') do
+#  it { should be_enabled }
+#  it { should be_running }
+#end
 
 # ポート3306でListenしているか確認する
-describe port(3306) do
-    it { should be_listening }
-end
+#describe port(3306) do
+#    it { should be_listening }
+#end
