@@ -56,6 +56,13 @@ Parameters:
     Type: String
     Default: "10.1.200.0/24"
 
+# lecture12 cfn-lintでAvailabilityZoneの記述修正の為追記
+  AvailabilityZone1:
+    Type: AWS::EC2::AvailabilityZone::Name
+
+  AvailabilityZone2:
+    Type: AWS::EC2::AvailabilityZone::Name
+
 Resources: 
 # ------------------------------------------------------------#
 #  VPC
@@ -93,8 +100,9 @@ Resources:
 # Public SubnetA Create
   PublicSubnetA: 
     Type: "AWS::EC2::Subnet"
-    Properties: 
-      AvailabilityZone: "ap-northeast-1a"
+    Properties:
+#     AvailabilityZone: "ap-northeast-1a"    # lecture12で下記に変更のためコメントアウト
+      AvailabilityZone: !Ref AvailabilityZone1
       CidrBlock: !Ref PublicSubnetACIDR
       VpcId: !Ref VPC 
       Tags: 
@@ -105,7 +113,8 @@ Resources:
   PublicSubnetC: 
     Type: "AWS::EC2::Subnet"
     Properties: 
-      AvailabilityZone: "ap-northeast-1c"
+#     AvailabilityZone: "ap-northeast-1c"    # lecture12で下記に変更のためコメントアウト
+      AvailabilityZone: !Ref AvailabilityZone2
       CidrBlock: !Ref PublicSubnetCCIDR
       VpcId: !Ref VPC 
       Tags: 
@@ -116,7 +125,8 @@ Resources:
   PrivateSubnetA: 
     Type: "AWS::EC2::Subnet"
     Properties: 
-      AvailabilityZone: "ap-northeast-1a"
+#     AvailabilityZone: "ap-northeast-1a"    # lecture12で下記に変更のためコメントアウト 
+      AvailabilityZone: !Ref AvailabilityZone1
       CidrBlock: !Ref PrivateSubnetACIDR
       VpcId: !Ref VPC 
       Tags: 
@@ -126,8 +136,9 @@ Resources:
 # Private SubnetC Create
   PrivateSubnetC: 
     Type: "AWS::EC2::Subnet"
-    Properties: 
-      AvailabilityZone: "ap-northeast-1c"
+    Properties:
+#     AvailabilityZone: "ap-northeast-1c"     # lecture12で下記に変更のためコメントアウト
+      AvailabilityZone: !Ref AvailabilityZone2
       CidrBlock: !Ref PrivateSubnetCCIDR
       VpcId: !Ref VPC 
       Tags: 
@@ -228,7 +239,7 @@ Resources:
 # ------------------------------------------------------------#                
 Outputs:
 # VPC
-  VPCID:
+  VPCName:
     Value: !Ref VPC
     Export:
       Name: !Sub "${PJPrefix}-vpc"
